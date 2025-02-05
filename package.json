@@ -4,12 +4,14 @@
   "description": "Implementação do https://www.tabnews.com.br para este repositório de estudos e práticas",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run docker:up && next dev",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "docker:up": "docker compose -f infra/compose.yaml up -d"
+    "docker:up": "docker compose -f infra/compose.yaml up -d",
+    "docker:stop": "docker compose -f infra/compose.yaml up stop",
+    "docker:down": "docker compose -f infra/compose.yaml down"
   },
   "author": "",
   "license": "MIT",
